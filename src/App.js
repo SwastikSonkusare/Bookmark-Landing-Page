@@ -2,6 +2,7 @@ import React from 'react'
 
 import Navbar from './components/Navbar/Navbar';
 import Header from './components/Header/Header';
+import Card from './components/Card/Card';
 import ContactUs from './components/ContactUs/ContactUs';
 import Footer from './components/Footer/Footer';
 
@@ -10,6 +11,7 @@ const App = () => {
         <>
             <Navbar />
             <Header />
+            <Card />
             <ContactUs />
             <Footer />
         </>

@@ -1,13 +1,12 @@
 import React from "react";
 
+import { ulItems } from '../../assets/data';
+
 import LogoSvg from "../LogoSvg/LogoSvg";
-
-
 
 import "./Navbar.scss";
 const Navbar = () => {
   const color = "#242A45";
-  const ulItems = ["features", "pricing", "contact"];
 
   return (
     <nav className="navbar">

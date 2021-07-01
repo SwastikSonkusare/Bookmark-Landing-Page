@@ -1,7 +1,6 @@
 import React from "react";
 
-import faceBookIcon from '../../assets/images/icon-facebook.svg';
-import twitterIcon from '../../assets/images/icon-twitter.svg';
+import { ulItems, icons } from '../../assets/data';
 
 import LogoSvg from "../LogoSvg/LogoSvg";
 
@@ -9,8 +8,7 @@ import "./Footer.scss";
 const Footer = () => {
     const color = "#fff";
 
-  const ulItems = ["features", "pricing", "contact"];
-  const icons = [faceBookIcon, twitterIcon]
+
 
   return (
     <footer className="footer">
