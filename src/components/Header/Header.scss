@@ -1,0 +1,46 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    // grid-gap: 3rem;
+    padding: 4rem 12rem;
+
+
+    &__left-section {
+        padding-top: 5rem;
+        // width: 50%;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 500;
+        color: hsl(229, 31%, 21%);
+        max-width: 40rem;
+        margin-bottom: 2rem;
+    }
+    
+    &__paragraph {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color:  hsl(229, 8%, 60%);
+        margin-bottom: 2rem;
+        max-width: 36rem;
+        line-height: 1.5;
+    }
+
+
+    &__buttons {
+        display: flex;
+        grid-gap: 1.5rem;
+        align-items: center;
+    }
+
+
+    &__right-section {
+        // width: 50%;
+    }
+
+    &__image {
+        max-width: 600px;
+        width: 100%;
+    }
+}
