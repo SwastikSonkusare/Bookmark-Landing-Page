@@ -36,11 +36,12 @@
 
 
     &__right-section {
-        // width: 50%;
+        max-width: 45rem;
+        width: 100%
     }
 
     &__image {
-        max-width: 600px;
-        width: 100%;
+        width: 450px;
+        height: 360px;
     }
 }

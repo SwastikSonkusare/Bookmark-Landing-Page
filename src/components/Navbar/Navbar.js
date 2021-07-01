@@ -1,14 +1,17 @@
 import React from "react";
 
-import Logo from "../../assets/images/logo-bookmark.svg";
+import LogoSvg from "../LogoSvg/LogoSvg";
+
+
 
 import "./Navbar.scss";
 const Navbar = () => {
+  const color = "#242A45";
   const ulItems = ["features", "pricing", "contact"];
 
   return (
     <nav className="navbar">
-      <img className="navbar__logo" src={Logo} alt={Logo}></img>
+      <LogoSvg color={color} />
 
       <div className="navbar__contents">
         <ul className="navbar__items">
