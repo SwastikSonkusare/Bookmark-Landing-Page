@@ -4,6 +4,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width: 31.25em) {
+        padding: 3rem;
+    }
+
     &__contents {
         display: flex;
         justify-content: center;
@@ -14,6 +18,10 @@
     &__items {
         display: flex;
         list-style: none;
+
+        @media only screen and (max-width: 56.25em) {
+            display: none;
+        }
     }
 
     &__item {
@@ -30,10 +38,26 @@
         font-weight: 400;
         color:  hsl(229, 8%, 60%);
     }
+
+    &__hamburger {
+        display: none;
+        cursor: pointer;
+
+        @media only screen and (max-width: 56.25em) {
+            display: block;
+        }
+    }
+
+    &__button {
+        @media only screen and (max-width: 56.25em) {
+            display: none;
+        }
+    }
+
+
 }
 
 .btn {
-    all: unset;
     font-size: 1.2rem;
     padding: 1rem 2.5rem;
     border: none;

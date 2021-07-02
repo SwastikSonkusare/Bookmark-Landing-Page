@@ -9,7 +9,7 @@ const ContactUs = () => {
 
             <form className="contact-us__form">
                 <input type="email" className="contact-us__input" placeholder="Enter your email address"></input>
-                <button className="btn btn--1">Contact Us</button>
+                <button className="btn btn--1 contact-us__button">Contact Us</button>
             </form> 
         </div>
     )

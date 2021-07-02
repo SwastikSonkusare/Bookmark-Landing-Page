@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
 
+    @media only screen and (max-width: 56.25em) {
+        margin: 10rem 0 5rem 0;
+        padding: 0 4rem;
+    }
+
     &__header {
         font-size: 2rem;
         font-weight: 500;
@@ -23,6 +28,11 @@
     &__container {
         display: flex;
         grid-gap: 3rem;
+        
+        @media only screen and (max-width: 56.25em) {
+            flex-direction: column;
+            grid-gap: 5rem;
+        }
     }
 
     &__content {
@@ -47,10 +57,18 @@
         
         &:nth-of-type(2) {
             transform: translateY(22%);
+            
+            @media only screen and (max-width: 56.25em) {
+                transform: translateY(0);
+            }
         }
 
         &:nth-of-type(3) {
             transform: translateY(44%);
+
+            @media only screen and (max-width: 56.25em) {
+                transform: translateY(0);
+            }
         }
     }
 

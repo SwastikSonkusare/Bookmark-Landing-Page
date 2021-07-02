@@ -3,6 +3,11 @@
     padding: 4rem 20rem 6rem 20rem;
     text-align: center;
 
+    @media only screen and (max-width: 43.75em) {
+        padding: 4rem 6rem;
+    }
+    
+
     &__joined {
         text-transform: uppercase;
         font-weight: 400;
@@ -25,6 +30,10 @@
         justify-content: center;
         align-items: center;
         grid-gap: 2rem;
+
+        @media only screen and (max-width: 56.25em) {
+           flex-direction: column;
+        }
     }
 
     &__input {
@@ -33,6 +42,10 @@
         border-radius: 4px;
         padding: 1rem 7.5rem 1rem 1.5rem;
 
+        @media only screen and (max-width: 56.25em) {
+            width: 100%;
+        }
+
         &::placeholder {
             color: hsl(229, 8%, 60%);
             opacity: .5;
@@ -40,6 +53,13 @@
 
         &:focus-visible {
             outline: none;
+        }
+    }
+
+    &__button {
+        
+        @media only screen and (max-width: 56.25em) {
+            width: 100%;
         }
     }
 }
