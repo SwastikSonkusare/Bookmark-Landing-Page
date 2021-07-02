@@ -1,3 +1,6 @@
+@import '../../sass/main.scss';
+
+
 .card {
     margin: 25rem 0;
     display: flex;
@@ -13,12 +16,8 @@
     }
     
     &__paragraph {
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: hsl(229, 8%, 60%);
+        @include paragraph-basic;
         max-width: 46rem;
-        text-align: center;
-        margin-bottom: 4rem;
     }
 
     &__container {
