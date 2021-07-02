@@ -1,0 +1,60 @@
+@import '../../sass/main.scss';
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    &__paragraph {
+        @include paragraph-basic;
+        max-width: 45rem;
+
+    }   
+
+
+    &__container {
+        padding: 0 6rem;
+        display: flex;
+        grid-gap: 3rem;
+    }
+
+    &__left-section{
+        max-width: 500rem;
+        width: 100%;
+    }
+
+    &__image {
+        width: 480px;
+        height: 280px;
+    }
+
+    &__right-section{
+        padding-top: 6rem;
+
+        &-paragraph {
+            @include paragraph-basic;
+            text-align: unset;
+            max-width: 64rem;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.tab {
+    margin-bottom: 5rem;
+    display: flex;
+    grid-gap: 7rem;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        padding: 2rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: hsl(229, 31%, 21%);
+        opacity: .9;
+    }
+}   

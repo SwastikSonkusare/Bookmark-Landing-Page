@@ -1,3 +1,5 @@
+@import '../../sass/main.scss';
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -17,11 +19,10 @@
     }
     
     &__paragraph {
-        font-size: 1.3rem;
-        font-weight: 400;
-        color:  hsl(229, 8%, 60%);
+        @include paragraph-basic;
+        text-align: unset;
         margin-bottom: 2rem;
-        max-width: 36rem;
+        max-width: 40rem;
         line-height: 1.5;
     }
 
