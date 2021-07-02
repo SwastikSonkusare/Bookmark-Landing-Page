@@ -4,6 +4,11 @@ import chromeIcon from './images/logo-chrome.svg';
 import firefoxIcon from './images/logo-firefox.svg';
 import operaIcon from './images/logo-opera.svg';
 
+import illustrationFeatureTab1 from './images/illustration-features-tab-1.svg';
+import illustrationFeatureTab2 from './images/illustration-features-tab-2.svg';
+import illustrationFeatureTab3 from './images/illustration-features-tab-3.svg';
+
+
 
 export const cardContents = [
     {
@@ -48,4 +53,26 @@ export const accordionContents = [
         question: 'What about other Chromium browsers?',
         answer: 'Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.'
     }
-]
+];
+
+
+export const tabContents = [
+    {
+        image: illustrationFeatureTab1,
+        title: 'Simple Bookmarking',
+        header: 'Bookmark in one click',
+        paragraph: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.'
+    },
+    {
+        image: illustrationFeatureTab2,
+        title: 'Speed Searching',
+        header: 'Intelligent search',
+        paragraph: 'Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.'
+    },
+    {
+        image: illustrationFeatureTab3,
+        title: 'Easy Sharing',
+        header: 'Share your bookmarks',
+        paragraph: 'Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.'
+    }
+];

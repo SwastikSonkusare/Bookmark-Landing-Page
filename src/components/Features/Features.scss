@@ -23,6 +23,11 @@
     &__left-section{
         max-width: 500rem;
         width: 100%;
+        display: none;
+
+        &.active {
+            display: block;
+        }
     }
 
     &__image {
@@ -36,9 +41,17 @@
         &-paragraph {
             @include paragraph-basic;
             text-align: unset;
-            max-width: 64rem;
+            max-width: 62rem;
             line-height: 1.6;
             margin-bottom: 3rem;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
         }
     }
 }
@@ -51,6 +64,7 @@
     align-items: center;
 
     &__title {
+        all: unset;
         padding: 2rem;
         font-size: 1.5rem;
         font-weight: 400;

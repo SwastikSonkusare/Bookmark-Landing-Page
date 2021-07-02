@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
-import illustrationFeatureTab1 from '../../assets/images/illustration-features-tab-1.svg';
+import { tabContents } from "../../assets/data";
 
-import './Features.scss';
+import "./Features.scss";
 
 const Features = () => {
+    const tabBtn = useRef();
+    const imagesRef = useRef();
+    const content = useRef();
+
+    const [toggleState, setToggleState] = useState("Simple Bookmarking");
+
+    
+    const tabBtnHandler = (index) =>{
+        // const id = e.target.dataset.id;
+
+        // if(id) {
+        //     tabBtn.forEach((btn) =>{
+        //         btn.classList.remove("active");
+        //         e.target.classList.add("active")
+        //     })
+
+        //     content.forEach((singleContent) => {
+        //         singleContent.remove("active");
+        //     })
+
+        //     imagesRef.forEach((image) => {
+        //         image.remove("active");
+        //     })
+        // }
+
+        setToggleState(index)
+
+    }
+
+
   return (
     <main className="main">
       <h2 className="card__header">Features</h2>
@@ -15,22 +45,33 @@ const Features = () => {
       </p>
 
       <div className="tab">
-        <div className="tab__title">Simple Bookmarking</div>
-        <div className="tab__title">Speedy Searching</div>
-        <div className="tab__title">Easy Sharing</div>
+        {tabContents.map((item, index) => (
+          <button className="tab__title" data-id={item.title} ref={tabBtn} onClick={() =>tabBtnHandler(item.title)}>
+            {item.title}
+          </button>
+        ))}
       </div>
 
       <div className="main__container">
-        <div className="main__left-section">
-            <img className="main__image" src={illustrationFeatureTab1} alt={illustrationFeatureTab1}></img>
-        </div>
+        {tabContents.map((item, index) => (
+          <div className={toggleState === item.title ? "main__left-section active" : "main__left-section"}>
+            <img
+              className="main__image"
+              src={item.image}
+              alt={item.image}
+              id={item.title}
+              ref={imagesRef}
+
+            ></img>
+          </div>
+        ))}
         <div className="main__right-section">
-          <h2 className="card__header">Bookmark in one click</h2>
-          <p className="main__right-section-paragraph">
-            Organize your bookmarks however you like. Our simple drag-and-drop
-            interface gives you complete control over how you manage your
-            favourite sites.
-          </p>
+          {tabContents.map((item, index) => (
+            <div id={item.title} className={toggleState === item.title ?  "main__content active" : "main__content"} ref={content}>
+              <h2 className="card__header">{item.header}</h2>
+              <p className="main__right-section-paragraph">{item.paragraph}</p>
+            </div>
+          ))}
 
           <button className="btn btn--2">More info</button>
         </div>
