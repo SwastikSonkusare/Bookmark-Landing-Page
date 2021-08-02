@@ -1,13 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 
 import { tabContents } from "../../assets/data";
 
 import "./Features.scss";
 
 const Features = () => {
-    const tabBtn = useRef();
-    const imagesRef = useRef();
-    const content = useRef();
 
     const [toggleState, setToggleState] = useState("Simple Bookmarking");
 
